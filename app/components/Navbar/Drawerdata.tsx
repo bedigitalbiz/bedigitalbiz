@@ -19,7 +19,7 @@ function classNames(...classes: string[]) {
 
 const Data = () => {
   return (
-    <div className={` opacity-100 text-lg font-normal text-center lg:text-start pt-1  `}>
+    <div className={` opacity-100 text-lg  font-normal text-center lg:text-start pt-1  `}>
       <div className="rounded-md max-w-sm w-full mx-auto ">
         <div className="flex-1 space-y-1 py-1">
           <div className="sm:block">

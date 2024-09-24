@@ -1,10 +1,15 @@
+"use client"; // ใช้เพื่อบอกว่าเป็น Client Component
+
 import Image from "next/image";
+import { useRef, useState } from "react"; // นำเข้า useRef และ useState
 import Link from 'next/link';
+
 
 interface datatype {
     imgSrc: string;
     heading: string;
     paragraph: string;
+    href: string; // เพิ่ม href
 }
 
 const Aboutdata: datatype[] = [
@@ -12,93 +17,134 @@ const Aboutdata: datatype[] = [
         imgSrc: "/assets/school/THK.jpg",
         heading: "โรงเรียนธรรมศาสตร์คลองหลวงวิทยาคม",
         paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
         // button: "/",
     },
     {
         imgSrc: "/assets/school/SKR.png",
         heading: "โรงเรียนสวนกุหลาบวิทยาลัย รังสิต",
         paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
-        // button: "/",
+        href: 'commingsoon',
     },
     {
         imgSrc: "/assets/school/SKW.jpg",
         heading: "โรงเรียนศรีสะเกษวิทยาลัย",
         paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
         // button: "/"
     },
     {
         imgSrc: "/assets/school/SIRIN.jpg",
         heading: "โรงเรียนสิรินธร",
         paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
         // button: "/"
     },
     {
         imgSrc: "/assets/logo/BD.png",
         heading: "โรงเรียนบดินทรเดชา (สิงห์ สิงหเสนี)",
         paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
+        // button: "/"
+    },
+    {
+        imgSrc: "/assets/school/THK.jpg",
+        heading: "โรงเรียนธรรมศาสตร์คลองหลวงวิทยาคม",
+        paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
+        // button: "/",
+    },
+    {
+        imgSrc: "/assets/school/SKR.png",
+        heading: "โรงเรียนสวนกุหลาบวิทยาลัย รังสิต",
+        paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
+        // button: "/",
+    },
+    {
+        imgSrc: "/assets/school/SKW.jpg",
+        heading: "โรงเรียนศรีสะเกษวิทยาลัย",
+        paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
+        // button: "/"
+    },
+    {
+        imgSrc: "/assets/school/SIRIN.jpg",
+        heading: "โรงเรียนสิรินธร",
+        paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
+        // button: "/"
+    },
+    {
+        imgSrc: "/assets/logo/BD.png",
+        heading: "โรงเรียนบดินทรเดชา (สิงห์ สิงหเสนี)",
+        paragraph: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa',
+        href: 'commingsoon',
         // button: "/"
     },
     
 ]
 
 const Features = () => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        const container = containerRef.current;
+        if (container) {
+            setIsDragging(true);  // เริ่มลาก
+            setStartX(e.pageX - container.offsetLeft);  // ตำแหน่งเริ่มต้นของการคลิก
+            setScrollLeft(container.scrollLeft);  // ตำแหน่งการเลื่อนในขณะนั้น
+        }
+    };
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!isDragging) return; // ไม่เลื่อนถ้าไม่ได้คลิกค้างไว้
+        e.preventDefault();
+        const container = containerRef.current;
+        if (container) {
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 2; // ความเร็วในการเลื่อน
+            container.scrollLeft = scrollLeft - walk; // เลื่อนตามการคลิกและลาก
+        }
+    };
+
+    const handleMouseUp = () => setIsDragging(false); // ปล่อยคลิกหยุดเลื่อน
+    const handleMouseLeave = () => setIsDragging(false); // ถ้าลากเมาส์ออกจากขอบเขตให้หยุดเลื่อน
+
     return (
-        
-        <div className="bg-babyblue" id="Reference">
-            
-            <div className="mx-auto max-w-2xl  py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="bg-white2" id="Reference">
+            <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <h3 className="text-4xl sm:text-4xl font-semibold text-black text-center m-10">Site Reference</h3>
-                <h5 className="text-black opacity-60 text-lg font-normal text-center mx-10 ">ขอขอบคุณ ลูกค้าทุกท่าน ที่ได้ไว้วางใจในบริการ ด้วยดีเสมอมา เราจะพัฒนาบุคลากร และการให้บริการหลังการขาย ให้ดียิ่งขึ้นต่อไป</h5>
-                <a href="commingsoon">
-                            <div className="but1 text-center m-8">
-                                <button>
-                                    <div className="text">ดูเพิ่มเติม</div>
-                                    <div className="blob"></div>
-                                    <div className="blob"></div>
-                                    <div className="blob"></div>
-                                    <div className="blob"></div>
-                                </button>
-                                </div>
-                        </a>
-                <div className="scroll-container">
-                <div className="scroll-content">
-                        {/* ชุดการ์ดที่ 1 */}
-                        {Aboutdata.map((item, i) => (
-                        <div key={i} className="card bg-white rounded-2xl p-5 featureShadow ">
-                            <Image src={item.imgSrc} alt={item.imgSrc} width={100} height={100} className="mb-2 mx-auto" />
-                            <h3 className="text-sm  text-black mt-2 text-center">{item.heading}</h3>
-                            {/* <Link href={item.button} target="_blank">
-                            <div className="flex justify-center items-center mt-4">
-                                <div className="text-electricblue text-xl font-medium flex items-center justify-center gap-2 w-12 h-12 bg-white rounded-full shadow-md">
-                                <Image src="/assets/people/arrow-right.svg" alt="arrow-right" width={24} height={24} />
-                                </div>
-                            </div>
-                            </Link> */}
-                        </div>
-                        ))}
+                <h5 className="text-black opacity-60 text-lg font-normal text-center mx-10 my-10">
+                    ขอขอบคุณ ลูกค้าทุกท่าน ที่ได้ไว้วางใจในบริการ ด้วยดีเสมอมา
+                </h5>
 
-                        {/* ชุดการ์ดที่ 2 (ซ้ำ) */}
+                <div
+                    className="scroll-container rounded-2xl overflow-x-scroll"
+                    ref={containerRef}
+                    onMouseDown={handleMouseDown}   // เริ่มคลิก
+                    onMouseMove={handleMouseMove}   // ระหว่างลาก
+                    onMouseUp={handleMouseUp}       // ปล่อยคลิก
+                    onMouseLeave={handleMouseLeave} // ออกจากขอบเขต
+                    style={{ cursor: isDragging ? "grabbing" : "grab" }} // เปลี่ยน cursor เมื่อคลิก
+                >
+                    <div className="scroll-content flex space-x-4">
                         {Aboutdata.map((item, i) => (
-                        <div key={`${i}-duplicate`} className="card bg-white rounded-2xl p-5 featureShadow">
-                            <Image src={item.imgSrc} alt={item.imgSrc} width={100} height={100} className="mb-2 mx-auto" />
-                            <h3 className="text-sm  text-black mt-2 text-center">{item.heading}</h3>
-                            {/* <Link href={item.button} target="_blank">
-                            <div className="flex justify-center items-center mt-4">
-                                <div className="text-electricblue text-xl font-medium flex items-center justify-center gap-2 w-12 h-12 bg-white rounded-full shadow-md">
-                                <Image src="/assets/people/arrow-right.svg" alt="arrow-right" width={24} height={24} />
+                            <Link key={i} href={item.href} passHref>
+                                <div key={i} className="card my-4 rounded-2xl p-5 featureShadow">
+                                    <Image src={item.imgSrc} alt={item.imgSrc} width={100} height={100} className="mb-2 mx-auto" />
+                                    <h3 className="text-xs md:text-sm text-black mt-2 text-center">{item.heading}</h3>
                                 </div>
-                            </div>
-                            </Link> */}
-                        </div>
+                            </Link>
                         ))}
                     </div>
-                    </div>
-
-
+                </div>
             </div>
-                
         </div>
-    )
-}
+    );
+};
 
 export default Features;

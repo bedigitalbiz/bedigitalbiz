@@ -34,21 +34,23 @@ const Navbar = () => {
         <Disclosure as="nav" className="navbar navbar-blur" >
 
             <>
-                <div className="mx-auto max-w-7xl px-6 md:py-4 lg:px-8 " >
-                    <div className="relative flex h-10 items-center justify-between">
+                <div className="mx-auto max-w-7xl px-6 md:py-4 lg:px-8  " >
+                <div className="relative flex h-10 md:h-3 items-center justify-between">
                         <div className="flex flex-1 items-center sm:items-stretch sm:justify-start" >
 
                             {/* LOGO */}
-
+                            
                             <div className="flex flex-shrink-0 items-center">
+                            <a href="../#Home">
                                 <img
-                                    className="block h-7 w-24 lg:hidden"
+                                    className="block h-5 w-20 lg:hidden"
                                     src={'/assets/logo/BE.png'}
                                     alt="bedigitalbiz-logo"
                                 />
-                                <a href="#Home">
+                            </a>
+                                <a href="../#Home">
                                     <img
-                                        className="hidden h-12 w-full lg:block"
+                                        className="hidden h-10 w-full lg:block"
                                         src={'/assets/logo/BE.png'}
                                         alt="bedigitalbiz-logo"
                                     />
@@ -65,8 +67,8 @@ const Navbar = () => {
                                             key={item.name}
                                             href={item.href}
                                             className={classNames(
-                                                item.current ? ' text-black hover:opacity-75' : 'hover:text-black hover:opacity-75',
-                                                'px-3 py-4 text-lg font-normal text-black space-links'
+                                                item.current ? ' text-black hover:opacity-75' : 'hover:text-blueGray hover:opacity-75',
+                                                'px-3 py-4 text-sm font-normal text-black space-links'
                                             )}
                                             aria-current={item.href ? 'page' : undefined}
                                         >

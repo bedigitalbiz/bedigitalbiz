@@ -42,6 +42,7 @@ html:not([data-scroll="0"]) .ttty {
     background-repeat: no-repeat; /* ไม่ให้ภาพซ้ำ */
     height: 100vh; /* ความสูงครอบคลุมเต็มหน้าจอ */
     width: 100%; /* ความกว้างเต็ม */
+    
 }
 
 
@@ -52,11 +53,43 @@ html:not([data-scroll="0"]) .ttty {
     
 } */
 
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::before {
+  content: "";
+  background-image: url("/assets/banner/fiber.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px); /* ใช้ filter แทน backdrop-filter */
+  opacity: 0.4; /* ทำให้พื้นหลังจางลง */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* ทำให้พื้นหลังอยู่ด้านหลังเนื้อหา */
+}
+
+
+.contentbanner {
+  z-index: 1; /* ทำให้เนื้อหาอยู่ด้านบนของพื้นหลัง */
+  color: black; /* สามารถกำหนดสีเนื้อหาตามต้องการ */
+}
+
+
 .navbar-blur {
   
   border-radius: 5cap;
   backdrop-filter: blur(40px); /* ทำให้พื้นหลังเบลอ */
-  background-color: rgba(255, 255, 255, 0.178); /* โปร่งใสเพื่อให้เห็นเบลอได้ชัด */
+  background-color: rgba(255, 255, 255, 0.473); /* โปร่งใสเพื่อให้เห็นเบลอได้ชัด */
   position: fixed;
   top: 0;
   width: 100%;
@@ -258,7 +291,7 @@ html:not([data-scroll="0"]) .ttty {
     width: 100%;
     height: 100%;
     /* Add your background pattern here */
-    background-color:  #ffffff;
+    background-color:  #e8e8e8;
     background-image:  radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
     background-size: 30px 30px;
     background-position: -5px -5px;
@@ -275,7 +308,7 @@ html:not([data-scroll="0"]) .ttty {
   /* กำหนดให้การ์ดเลื่อนไปทางซ้าย */
   .scroll-content {
     display: flex;
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 10s linear infinite;
   }
   
   /* เลื่อนจากขวาไปซ้าย */
@@ -290,9 +323,36 @@ html:not([data-scroll="0"]) .ttty {
   
   .card {
     flex: 0 0 auto;
+    height: 200px;
     width: 200px; /* กำหนดขนาดของการ์ด */
     margin-right: 20px; /* ระยะห่างระหว่างการ์ด */
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 15px 15px 30px #e8e8e8,
+              
   }
+
+  .card:hover {
+    border: 1px solid #e8e8e8;
+    transform: scale(1.05);
+  }
+  
+  .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+  /* สำหรับหน้าจอโทรศัพท์ */
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 120px; /* ขนาดการ์ดเล็กลงในโทรศัพท์ */
+    margin-right: 10px;
+    border-radius: 15px; /* ลดความโค้งในโทรศัพท์ */
+    box-shadow: 10px 10px 20px #e8e8e8;
+  }
+}
+
+
+
   
       
       
