@@ -15,8 +15,8 @@ const Service = () => {
             </div>
 
             <div className='col-span-6 flex flex-col justify-evenly lg:pl-24 mt-10 lg:mt-0'>
-                <h1 className='text-sky text-sm sm:text-xl font-semibold text-center lg:text-start lh-143'>ไม่ต้องเสียเวลา เสียเงิน ลองผิด ลองถูก กับระบบอินเตอร์เน็ตระบบ Network และระบบ WiFi อีกต่อไป Be Digital Biz หาคำตอบไว้ให้คุณแล้ว ครบจบทุกปัญหา</h1>
-                <h3 className='text-black text-base font-normal text-center lg:text-start lh-173 opacity-75 pt-5 lg:pt-0'>Cisco Meraki ให้เช่า จำหน่าย ระบบNetwork,โทรศัพท์ IP Phone , Server ,กล้องวงจรปิด IP Camera ,ระบบสายไฟเบอร์ออฟติก และอุปกรณ์ IT ทุกชนิด</h3>
+                <h1 className='text-sky text-xl sm:text-xl text-center lg:text-start lh-143'>ไม่ต้องเสียเวลา เสียเงิน ลองผิด ลองถูก กับระบบอินเตอร์เน็ตระบบ Network และระบบ WiFi อีกต่อไป Be Digital Biz <br />หาคำตอบไว้ให้คุณแล้ว ครบจบทุกปัญหา</h1>
+                <h3 className='text-black text-base font1 text-center lg:text-start lh-173 opacity-75 pt-5 lg:pt-0'>Cisco Meraki ให้เช่า จำหน่าย ระบบNetwork,โทรศัพท์ IP Phone , Server ,กล้องวงจรปิด IP Camera ,ระบบสายไฟเบอร์ออฟติก และอุปกรณ์ IT ทุกชนิด</h3>
                 <a href="commingsoon">
                     <div className="but1 text-center m-8">
                         <button>

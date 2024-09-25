@@ -9,10 +9,10 @@ const Business = () => {
 
             <div className='grid grid-cols-1 lg:grid-cols-12 space-x-1'>
 
-                <div className='col-span-6 flex flex-col justify-center'>
+                <div className='font1 col-span-6 flex flex-col justify-center'>
 
-                    <h2 className='text-lime-500 text-xl sm:text-xl font-semibold text-center lg:text-start lh-143'>Be Digital Biz มอบประสบการณ์การทํางานแบบไฮบริดที่ราบรื่น</h2>
-                    <h3 className='text-black text-base font-normal text-center lg:text-start lh-173 opacity-75 pt-3'>การเชื่อมต่อที่เชื่อถือได้และปลอดภัยสามารถเข้าถึงได้ไม่ว่าคุณจะอยู่ที่ไหน วางใจในเทคโนโลยี Meraki ในสํานักงาน ที่บ้าน หรือออกนอกบ้านบนถนนเปิด</h3>
+                    <h2 className='text-lime-500 text-xl sm:text-xl text-center lg:text-start lh-143'>Be Digital Biz มอบประสบการณ์การทํางานแบบไฮบริดที่ราบรื่น</h2>
+                    <h3 className='text-black text-base text-center lg:text-start lh-173 opacity-75 pt-3'>การเชื่อมต่อที่เชื่อถือได้และปลอดภัยสามารถเข้าถึงได้ไม่ว่าคุณจะอยู่ที่ไหน วางใจในเทคโนโลยี Meraki ในสํานักงาน ที่บ้าน หรือออกนอกบ้านบนถนน</h3>
 
                     {/* <Link href={'/'} className="text-electricblue text-lg font-medium flex gap-2 pt-4 mx-auto lg:mx-0">
                         Learn more <Image src="/assets/people/arrow-right.svg" alt="arrow-right" width={24} height={24} />

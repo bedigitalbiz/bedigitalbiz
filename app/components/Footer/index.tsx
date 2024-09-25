@@ -92,15 +92,15 @@ const footer = () => {
                 {/* All Rights Reserved */}
 
                 <div className='pt-12 pb-10 lg:flex items-center justify-between border-t border-t-white border-opacity-30'>
-                <h4 className='text-lg text-center md:text-start font-normal text-white opacity-60'>
+                <h4 className='text-lg text-center md:text-start font1 text-white opacity-60'>
                     <Link href="https://maps.app.goo.gl/YAbv9Rt9PhSoPcXH7" target="_blank">
                         29/1 ม.7 ต.สวายจีก อำเภอเมืองบุรีรัมย์, Buriram, Thailand, Buriram
                     </Link>
                 </h4>
                     <div className="flex gap-5 mt-6 md:mt-0 justify-center md:justify-start">
-                        <h4 id='Contact' className='opacity-60 text-lg font-normal text-white'><Link href="/" target="_blank">044 181 244</Link></h4>
+                        <h4 id='Contact' className='opacity-60 text-lg font1 text-white'><Link href="/" target="_blank">044 181 244</Link></h4>
                         <div className="h-5 bg-white opacity-60 w-0.5"></div>
-                        <h4 className='opacity-60 text-lg font-normal text-white'>
+                        <h4 className='opacity-60 text-lg font1 text-white'>
                             <Link href="mailto:info@bedigitalbiz.co.th" target="_blank">bedigitalbiz.co.th</Link>
                         </h4>
 

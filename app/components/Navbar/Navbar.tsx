@@ -68,7 +68,7 @@ const Navbar = () => {
                                             href={item.href}
                                             className={classNames(
                                                 item.current ? ' text-black hover:opacity-75' : 'hover:text-blueGray hover:opacity-75',
-                                                'px-3 py-4 text-sm font-normal text-black space-links'
+                                                'px-3 py-4 text-sm font1 text-black space-links'
                                             )}
                                             aria-current={item.href ? 'page' : undefined}
                                         >

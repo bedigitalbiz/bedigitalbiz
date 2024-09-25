@@ -193,6 +193,12 @@ html:not([data-scroll="0"]) .ttty {
     100% { opacity: 0; }
 }
 
+
+.font1 {
+  font-family: 'San Francisco', Helvetica, Arial, san-serif;
+}
+
+
 .but1{
         button {
             position: relative;
@@ -292,9 +298,9 @@ html:not([data-scroll="0"]) .ttty {
     height: 100%;
     /* Add your background pattern here */
     background-color:  #e8e8e8;
-    background-image:  radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
+    /* background-image:  radial-gradient(rgba(12, 12, 12, 0.171) 2px, transparent 0);
     background-size: 30px 30px;
-    background-position: -5px -5px;
+    background-position: -5px -5px; */
     
     }
 

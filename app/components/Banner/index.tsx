@@ -12,19 +12,22 @@ const Banner = () => {
 
 
                 <div className="col-span-12 flex flex-col justify-center items-center h-screen relative">
-                        <h1 className='text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5 slidein'>
+                        <h1 className='font1 text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5 slidein'>
                             <span className="text-blue-800 ">Be </span>
                             <span className="text-red">Di</span>
                             <span className="text-pink-600">gi</span>
                             <span className="text-sky">tal</span>
                             <span className="text-lime-500"> Biz</span>
                         </h1>
-                        <div className="text-black opacity-75 md:text-lg text-sm  font-normal flex justify-center items-center text-center pt-8 px-2 md:px-20 slidein">
+                        <span className="font1 text-black opacity-75 md:text-xl text-sm flex justify-center items-center text-center pt-8 px-2 md:px-20 slidein">
                             We make the innovation happen. A cloud-based network platform with real management experience. Evolve digitally for all customers segment.
-                        </div>
+                        </span>
+                        
+                        
+                        
 
 
-                        <div className='pt-8 mx-auto lg:mx-0'>
+                        <div className='font1 pt-8 mx-auto lg:mx-0'>
                             <a href="#Contact">
                                 <div className="but1 slidein ">
                                     <button>

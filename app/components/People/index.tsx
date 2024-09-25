@@ -36,8 +36,8 @@ const People = () => {
 
     return (
         <div id="pp" className='pp-bg relative py-10 bg-white2'>
-            <div className='mx-auto max-w-7xl sm:py-0 lg:px-8 my-16'>
-                <h3 className='text-center text-2xl sm:text-65xl font-black m-10'>ผลงานการให้บริการทั้งหมด</h3>
+            <div className=' mx-auto max-w-7xl sm:py-0 lg:px-8 my-16'>
+                <h3 className='text-center text-2xl sm:text-65xl font1 m-10'>ผลงานการให้บริการทั้งหมด</h3>
 
                  {/* ภาพใหญ่ที่แสดงตามสัดส่วนจริง */}
                  <div className="flex justify-center items-center mb-8">
