@@ -10,8 +10,8 @@ const Service = () => {
 
         <div className='grid grid-cols-1 lg:grid-cols-12 space-x-1 pt-10 lg:pt-32  '>
 
-            <div className='col-span-6 flex justify-center'>
-                <Image src="/assets/banner/nn3.png" alt="nothing" width={1000} height={705} />
+            <div className='col-span-6 flex justify-center '>
+                <Image className='rounded-2xl' src="/assets/pricing/ser1.jpg" alt="nothing" width={800} height={505} />
             </div>
 
             <div className='col-span-6 flex flex-col justify-evenly lg:pl-24 mt-10 lg:mt-0'>
