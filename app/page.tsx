@@ -14,7 +14,7 @@ export default function Home() {
       <Business />
       <Service />
       <Features />
-      <People />
+      {/* <People /> */}
       
       {/* <Payment /> */}
       
