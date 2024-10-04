@@ -88,7 +88,7 @@ const Aboutdata: datatype[] = [
 const Features = () => {
 
     return (
-        <div className="bg-white2" id="Reference">
+        <div className="bg-white" id="Reference">
             <div className="font1 mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <h3 className="text-4xl sm:text-4xl  text-black text-center m-10">Site Reference</h3>
                 <h5 className="text-black opacity-60 text-lg text-center mx-10 my-10">

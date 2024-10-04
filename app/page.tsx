@@ -5,6 +5,7 @@ import Mode from './components/Navbar/Mode';
 import Payment from './components/Payment/index';
 import People from './components/People/index';
 import Service from './components/Pricing';
+import Partner from './components/Partner';
 
 export default function Home() {
   return (
@@ -13,10 +14,11 @@ export default function Home() {
       <Banner />
       <Business />
       <Service />
+      <Payment />
       <Features />
       {/* <People /> */}
+      <Partner />
       
-      {/* <Payment /> */}
       
     </main>
   )
